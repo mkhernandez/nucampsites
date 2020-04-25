@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -27,11 +28,66 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <div class="col col-md-4 col-xl-2">
-                    <a type="button" class="btn btn-info btn-lg mt-4" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Or call us at <br/><strong>1-206-555-1234</strong>" href="#reserveForm">Reserve Campsite</a>
+                    <a type="button" class="btn btn-info btn-lg mt-4" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
                 </div>
             </div>
         </div>
     </header>
+
+    <div class="modal fade" id="reserveModal" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">Reserve a Campsite</h5>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="reserveForm">
+                        <div class="form-group row">
+                            <label class="col-12 col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
+                            <div class=" col-12 col-sm-6">
+                                <select class="form-control" name="numCampers" id="numCampers">
+                                    <option value="">select</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-12 col-sm-6 col-form-label" for="date">Date</label>
+                            <div class="col-12 col-sm-6">
+                                <input class="form-control" type="date" id="date" name="date" placeholder="mm/dd/yyyy">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label" for="">Campsite Type</label>
+                            <div class="col btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-success active" for="">
+                                    <input type="radio" name="siteType" id="siteTent" autocomplete="off" checked>Tent
+                                </label>
+                                <label class="btn btn-primary" for="">
+                                    <input type="radio" name="siteType" id="siteRv" autocomplete="off">RV
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-secondary">Cancel</button>
+                                <button class="btn btn-primary" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
@@ -187,47 +243,6 @@
             </div>
         </div>
 
-        <div class="row row-content align-items-center">
-            <div class="col-sm-6 mx-auto">
-                <div class="card">
-                    <div class="card-header text-white bg-info">
-                        <h3>Reserve a Campsite</h3>
-                    </div>
-                    <div class="card-body">
-                        <form action="" id="reserveForm">
-                            <div class="form-group row">
-                                <label class="col-12 col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
-                                <div class=" col-12 col-sm-6">
-                                    <select class="form-control" name="numCampers" id="numCampers">
-                                        <option value="">select</option>
-                                        <option value="">1</option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
-                                        <option value="">4</option>
-                                        <option value="">5</option>
-                                        <option value="">6</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-12 col-sm-6 col-form-label" for="date">Date</label>
-                                <div class="col-12 col-sm-6">
-                                    <input class="form-control" type="date" id="date" name="date" placeholder="mm/dd/yyyy">
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col">
-                                    <button class="btn btn-primary" type="submit">Search</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
     
     <footer class="site-footer">
@@ -244,10 +259,10 @@
                 </div>
                 <div class="col-6 col-sm-5 text-center">
                     <h5>Social</h5>
-                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"> <i class="fa fa-instagram"></i> </a>
-                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"> <i class="fa fa-facebook"></i> </a>
-                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"> <i class="fa fa-twitter"></i> </a>
-                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"> <i class="fa fa-youtube"></i> </a>
+                    <a class="btn btn-social-icon btn-instagram" href="https://instagram.com/"> <i class="fa fa-instagram"></i> </a>
+                    <a class="btn btn-social-icon btn-facebook" href="https://facebook.com/"> <i class="fa fa-facebook"></i> </a>
+                    <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/"> <i class="fa fa-twitter"></i> </a>
+                    <a class="btn btn-social-icon btn-google" href="https://youtube.com/"> <i class="fa fa-youtube"></i> </a>
                 </div>
                 <div class="col-sm-4 text-center">
                     <a role="button" class="btn btn-link" href="tel:+12065551234"> <i class="fa fa-phone fa-lg text-primary"> </i> 1-206-555-1234</a> <br />
@@ -262,11 +277,7 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Script tag in jQuery needed to add tooltips -->
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        })
-    </script>
+    
 </body>
 
 </html>
